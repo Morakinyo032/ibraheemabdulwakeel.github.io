@@ -210,6 +210,20 @@ h2 { font-family: var(--serif); font-size:clamp(2rem,4vw,3.2rem); font-style:ita
 .feature-list { list-style:none; }
 .feature-list li { font-size:.85rem; color:var(--muted); padding:.3rem 0; display:flex; gap:.5rem; align-items:flex-start; }
 .feature-list li::before { content:'→'; color:var(--sage); flex-shrink:0; font-family:var(--mono); }
+.store-mock { background: var(--light); min-height: 380px; display:flex; align-items:center; justify-content:center; padding:2rem; }
+.store-window { background:white; border-radius:10px; width:100%; max-width:360px; overflow:hidden; border:1px solid var(--border); box-shadow:0 10px 25px rgba(14,26,20,.08); }
+.store-bar { background:var(--paper); padding:10px 12px; display:flex; align-items:center; gap:8px; border-bottom:1px solid var(--border); }
+.store-dot { width:9px; height:9px; border-radius:50%; display:inline-block; }
+.store-url { margin-left:6px; font-family:var(--mono); font-size:.68rem; color:var(--muted); }
+.store-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
+.store-card { background:white; padding:.9rem; }
+.store-thumb { width:100%; aspect-ratio:1/1; border-radius:4px; margin-bottom:.5rem; }
+.thumb-1 { background:linear-gradient(135deg,#c9a84c,#e6cf94); }
+.thumb-2 { background:linear-gradient(135deg,#7a8c7e,#b8c4ba); }
+.thumb-3 { background:linear-gradient(135deg,#2d6a4f,#74c69d); }
+.thumb-4 { background:linear-gradient(135deg,#b5451b,#e08a5f); }
+.store-name { font-size:.72rem; font-weight:700; color:var(--ink); font-family:var(--sans); line-height:1.3; }
+.store-price { font-family:var(--mono); font-size:.68rem; color:var(--sage); margin-top:.15rem; }
 
 .more-projects { margin-top:4rem; }
 .more-projects-head { display:flex; align-items:baseline; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; margin-bottom:1.75rem; }
@@ -320,7 +334,7 @@ footer p { font-family:var(--mono); font-size:.75rem; color:rgba(242,237,228,.3)
   <div class="hero-left">
     <div class="hero-tag">Available for opportunities</div>
     <h1>Building systems<br>that <span>think</span> and<br><span>scale.</span></h1>
-    <p class="hero-desc">Full-Stack Developer & Computational Mathematician based in Lagos, Nigeria. I build production-grade web applications, data pipelines, and ML-powered tools — currently shipping at Attanzeel Schools.</p>
+    <p class="hero-desc">Full-Stack Developer & Computational Mathematician based in Lagos, Nigeria. I build production-grade web applications, data pipelines, and AI-powered tools.</p>
     <div class="hero-btns"><a href="#projects" class="btn-primary">View my work</a><a href="#contact" class="btn-outline">Get in touch</a></div>
   </div>
   <div class="hero-right">
@@ -334,7 +348,7 @@ footer p { font-family:var(--mono); font-size:.75rem; color:rgba(242,237,228,.3)
 
 <div class="stats">
   <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Years Experience</div></div>
-  <div class="stat"><div class="stat-num">1</div><div class="stat-label">Production App Deployed</div></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-label">Production App Deployed</div></div>
   <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Certifications</div></div>
   <div class="stat"><div class="stat-num">B.Sc.</div><div class="stat-label">Mathematics, Univ. of Ibadan</div></div>
 </div>
@@ -343,7 +357,7 @@ footer p { font-family:var(--mono); font-size:.75rem; color:rgba(242,237,228,.3)
   <div class="about-grid">
     <div class="about-text"><div class="section-label">About me</div><h2>Maths meets<br>engineering.</h2>
       <p>I'm a <strong>Computational Mathematician</strong> turned software developer with a passion for building systems that are both mathematically rigorous and practically impactful. My background in applied mathematics shapes how I approach architecture, data flows, and algorithmic thinking.</p>
-      <p>At Attanzeel Schools, I designed and shipped a <strong>full-stack Computer-Based Testing platform</strong> from scratch — now actively used by teachers and students for daily examinations. The system includes AI question generation, a local-to-cloud sync engine, offline exam mode, and a multi-tier role system with approval workflows.</p>
+      <p>At Attanzeel Schools, I designed and shipped a <strong>full-stack Computer-Based Testing platform</strong> from scratch — now actively used by teachers and students for daily examination.</p>
     </div>
     <div class="about-aside"><div class="aside-block"><h4>Education</h4><p><strong>B.Sc. Mathematics</strong><br>University of Ibadan, 2024<br>Computational Mathematics & Modelling</p></div>
       <div class="aside-block"><h4>Currently</h4><p>ICT & Mathematics Instructor<br>Attanzeel Schools, Lagos<br>Jan 2026 – Present</p></div>
@@ -375,6 +389,38 @@ footer p { font-family:var(--mono); font-size:.75rem; color:rgba(242,237,228,.3)
         <p>Full-stack Computer-Based Testing system managing exam lifecycle, AI question generation, offline sync, and role-based access.</p>
         <div class="tech-pills"><span class="pill">Django</span><span class="pill">React</span><span class="pill">Gemini API</span><span class="pill">SQLite</span></div>
         <ul class="feature-list"><li>4-tier RBAC with approval workflows</li><li>AI question generation via Gemini</li><li>Local↔cloud sync engine for offline exams</li></ul>
+      </div>
+    </div>
+
+        <div class="project-featured">
+      <div class="store-mock">
+        <div class="store-window">
+          <div class="store-bar">
+            <span class="store-dot" style="background:#e63946"></span>
+            <span class="store-dot" style="background:#f4a261"></span>
+            <span class="store-dot" style="background:#74c69d"></span>
+            <span class="store-url">furniture-store.app</span>
+          </div>
+          <div class="store-grid">
+            <div class="store-card"><div class="store-thumb thumb-1"></div><p class="store-name">Oak Lounge Chair</p><p class="store-price">₦85,000</p></div>
+            <div class="store-card"><div class="store-thumb thumb-2"></div><p class="store-name">Walnut Coffee Table</p><p class="store-price">₦62,500</p></div>
+            <div class="store-card"><div class="store-thumb thumb-3"></div><p class="store-name">Linen Sofa, 3-Seat</p><p class="store-price">₦210,000</p></div>
+            <div class="store-card"><div class="store-thumb thumb-4"></div><p class="store-name">Rattan Bookshelf</p><p class="store-price">₦48,000</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-badge">Live in Production</div>
+        <h3>Furniture Store</h3>
+        <p>Storefront web app for browsing and ordering furniture, built with a component-driven React frontend and typed end-to-end with TypeScript.</p>
+        <div class="tech-pills"><span class="pill">TypeScript</span><span class="pill">React</span><span class="pill">CSS Grid</span></div>
+        <ul class="feature-list">
+          <li>Responsive product catalogue with category filtering</li>
+          <li>Cart & checkout flow built as reusable components</li>
+          <li>Type-safe data layer across the whole app</li>
+        </ul>
+        <a href="http://furniture-store-ace-tek.vercel.app" target="_blank" rel="noopener" class="view-all-repos" style="margin-top:.75rem; display:inline-block;">View the Site →</a>
+        <a href="https://github.com/Morakinyo032/Furniture-Store" target="_blank" rel="noopener" class="view-all-repos" style="margin-top:.75rem; display:inline-block;">View repository →</a>
       </div>
     </div>
 
