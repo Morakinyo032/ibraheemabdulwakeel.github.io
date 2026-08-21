@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Abdulwakeel Ibraheem — Developer & Mathematician</title>
+<title>Abdulwakeel Ibraheem — Developer &amp; Mathematician</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -211,6 +211,33 @@ h2 { font-family: var(--serif); font-size:clamp(2rem,4vw,3.2rem); font-style:ita
 .feature-list li { font-size:.85rem; color:var(--muted); padding:.3rem 0; display:flex; gap:.5rem; align-items:flex-start; }
 .feature-list li::before { content:'→'; color:var(--sage); flex-shrink:0; font-family:var(--mono); }
 
+.more-projects { margin-top:4rem; }
+.more-projects-head { display:flex; align-items:baseline; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; margin-bottom:1.75rem; }
+.more-projects-head .section-label { margin-bottom:0; }
+.more-projects-title { font-family:var(--serif); font-style:italic; font-size:1.5rem; color:var(--ink); }
+.view-all-repos { font-family:var(--mono); font-size:.78rem; color:var(--sage); border-bottom:1px solid transparent; transition:border-color .2s; white-space:nowrap; }
+.view-all-repos:hover { border-color:var(--sage); }
+
+.repo-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.25rem; }
+.repo-card {
+  display:block; background:white; border:1.5px solid var(--border);
+  border-radius:4px; padding:1.4rem; transition:all .25s;
+  position:relative;
+}
+.repo-card:hover { border-color:var(--sage); box-shadow:4px 4px 0 var(--mint); transform:translate(-2px,-2px); }
+.repo-card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:.6rem; margin-bottom:.5rem; }
+.repo-card-name { font-family:var(--sans); font-weight:700; font-size:.95rem; color:var(--ink); line-height:1.3; }
+.repo-visibility { font-family:var(--mono); font-size:.62rem; letter-spacing:.05em; text-transform:uppercase; padding:.15rem .55rem; border-radius:20px; border:1px solid var(--border); color:var(--muted); white-space:nowrap; flex-shrink:0; }
+.repo-visibility.public { color:var(--sage); border-color:rgba(45,106,79,.3); background:rgba(45,106,79,.06); }
+.repo-desc { font-size:.82rem; color:var(--muted); line-height:1.55; margin-bottom:1rem; min-height:2.5em; }
+.repo-meta { display:flex; align-items:center; gap:.85rem; font-family:var(--mono); font-size:.7rem; color:var(--muted); }
+.repo-lang { display:flex; align-items:center; gap:.4rem; }
+.repo-dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+.repo-dot.python { background:var(--gold); }
+.repo-dot.typescript { background:var(--sage); }
+.repo-dot.kotlin { background:var(--rust); }
+.repo-dot.html { background:var(--mint); }
+
 .skills-section { background:var(--light); }
 .skills-inner { max-width:1100px; margin:0 auto; }
 .skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1.5rem; }
@@ -229,6 +256,15 @@ h2 { font-family: var(--serif); font-size:clamp(2rem,4vw,3.2rem); font-style:ita
 .exp-org { font-family:var(--mono); font-size:.8rem; color:var(--sage); margin-bottom:.75rem; }
 .exp-bullets li { font-size:.9rem; color:var(--muted); line-height:1.6; padding:.2rem 0; padding-left:1rem; position:relative; }
 .exp-bullets li::before { content:'–'; position:absolute; left:0; color:var(--sage); font-family:var(--mono); }
+
+.exp-item:last-child { border-bottom:none; }
+
+.edu-item { padding:.4rem 0 1.1rem; }
+.edu-item + .edu-item { border-top:1px solid var(--border); padding-top:1.2rem; margin-top:.2rem; }
+.edu-item h3 { font-family:var(--sans); font-size:1rem; font-weight:700; color:var(--ink); margin-bottom:.3rem; }
+.edu-item .edu-org { font-family:var(--mono); font-size:.78rem; color:var(--sage); margin-bottom:.15rem; }
+.edu-item .edu-dates { font-family:var(--mono); font-size:.72rem; color:var(--muted); margin-bottom:.5rem; }
+.edu-item .edu-detail { font-size:.85rem; color:var(--muted); line-height:1.55; }
 
 .edu-certs { background:var(--light); }
 .edu-certs-inner { max-width:1100px; margin:0 auto; }
@@ -341,6 +377,79 @@ footer p { font-family:var(--mono); font-size:.75rem; color:rgba(242,237,228,.3)
         <ul class="feature-list"><li>4-tier RBAC with approval workflows</li><li>AI question generation via Gemini</li><li>Local↔cloud sync engine for offline exams</li></ul>
       </div>
     </div>
+
+    <div class="more-projects">
+      <div class="more-projects-head">
+        <div>
+          <div class="section-label">Also on GitHub</div>
+          <div class="more-projects-title">A few side builds.</div>
+        </div>
+        <a href="https://github.com/Morakinyo032?tab=repositories" target="_blank" rel="noopener" class="view-all-repos">View all repositories →</a>
+      </div>
+      <div class="repo-grid">
+
+        <a class="repo-card" href="https://github.com/Morakinyo032/Shop-Inventory-App" target="_blank" rel="noopener">
+          <div class="repo-card-top">
+            <span class="repo-card-name">Shop-Inventory-App</span>
+            <span class="repo-visibility public">Public</span>
+          </div>
+          <p class="repo-desc">Inventory management app for tracking stock, sales, and restocking.</p>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="repo-dot python"></span>Python</span>
+            <span>Updated 20h ago</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/Morakinyo032/Furniture-Store" target="_blank" rel="noopener">
+          <div class="repo-card-top">
+            <span class="repo-card-name">Furniture-Store</span>
+            <span class="repo-visibility public">Public</span>
+          </div>
+          <p class="repo-desc">E-commerce storefront concept for browsing and ordering furniture.</p>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="repo-dot typescript"></span>TypeScript</span>
+            <span>Updated 5d ago</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/Morakinyo032/School-Website-Builder" target="_blank" rel="noopener">
+          <div class="repo-card-top">
+            <span class="repo-card-name">School-Website-Builder</span>
+            <span class="repo-visibility public">Public</span>
+          </div>
+          <p class="repo-desc">Reusable website template for secondary schools.</p>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="repo-dot html"></span>HTML</span>
+            <span>Updated last week</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/Morakinyo032/Attanzeel-Online-School" target="_blank" rel="noopener">
+          <div class="repo-card-top">
+            <span class="repo-card-name">Attanzeel-Online-School</span>
+            <span class="repo-visibility public">Public</span>
+          </div>
+          <p class="repo-desc">Learning management system built for Attanzeel Schools.</p>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="repo-dot typescript"></span>TypeScript</span>
+            <span>Updated 2wk ago</span>
+          </div>
+        </a>
+
+        <a class="repo-card" href="https://github.com/Morakinyo032" target="_blank" rel="noopener">
+          <div class="repo-card-top">
+            <span class="repo-card-name">Prompt-Engineering-App-Course</span>
+            <span class="repo-visibility">Private</span>
+          </div>
+          <p class="repo-desc">Full crash course on prompt engineering.</p>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="repo-dot kotlin"></span>Kotlin</span>
+            <span>Updated 2d ago</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
   </div>
 </section>
 
@@ -348,11 +457,37 @@ footer p { font-family:var(--mono); font-size:.75rem; color:rgba(242,237,228,.3)
 
 <section class="experience reveal" id="experience"><div class="exp-inner"><div class="section-label">Experience</div><h2>Where I've worked.</h2>
   <div class="exp-item"><div class="exp-date">Jan 2026<br>Present</div><div class="exp-content"><h3>ICT & Mathematics Instructor</h3><div class="exp-org">At-Tanzeel Schools — Lagos</div><ul class="exp-bullets"><li>Deployed full-stack CBT platform used for live exams</li><li>Integrated AI question generation & offline sync engine</li></ul></div></div>
+  <div class="exp-item"><div class="exp-date">Jan 2022<br>Mar 2022</div><div class="exp-content"><h3>IT Support Intern</h3><div class="exp-org">Shongai Technologies Ltd — Sango Ota, Ogun State</div><ul class="exp-bullets"><li>Maintained computer systems, network infrastructure, and peripheral equipment</li><li>Executed data backup and restore procedures, safeguarding critical company data</li><li>Provided technical support to end-users, resolving hardware and software issues</li></ul></div></div>
 </div></section>
 
-<section class="edu-certs reveal" id="education"><div class="edu-certs-inner"><div class="edu-certs-grid"><div><div class="section-label">Education</div><h2>Academic<br>background.</h2><div class="edu-item"><h3>B.Sc. Mathematics</h3><p>University of Ibadan, 2024</p></div></div><div><div class="section-label">Certifications</div><h2>Credentials.</h2><div class="cert-item"><div class="cert-dot"></div><p><strong>Data Science in Precision Medicine</strong>Stanford University</p></div><div class="cert-item"><div class="cert-dot"></div><p><strong>AI/ML in Precision Medicine</strong>Stanford</p></div></div></div></div></section>
+<section class="edu-certs reveal" id="education"><div class="edu-certs-inner"><div class="edu-certs-grid">
+  <div>
+    <div class="section-label">Education</div><h2>Academic<br>background.</h2>
+    <div class="edu-item">
+      <h3>B.Sc. Mathematics</h3>
+      <div class="edu-org">University of Ibadan · Oyo, Nigeria</div>
+      <div class="edu-dates">October 2017 – April 2024</div>
+      <p class="edu-detail">Specialisation: Computational Mathematics, Mathematical Modelling, Applied Analysis</p>
+    </div>
+    <div class="edu-item">
+      <h3>Certificate in Applied Data Science</h3>
+      <div class="edu-org">WorldQuant University · Washington D.C., USA (Remote)</div>
+      <div class="edu-dates">January 2022 – December 2022</div>
+      <p class="edu-detail">Covered: Statistical Modelling, Machine Learning, Data Wrangling, Python for Data Science</p>
+    </div>
+  </div>
+  <div>
+    <div class="section-label">Certifications</div><h2>Credentials.</h2>
+    <div class="cert-item"><div class="cert-dot"></div><p><strong>Data Science in Precision Medicine</strong> — Stanford Deep Data Research Center, Stanford University</p></div>
+    <div class="cert-item"><div class="cert-dot"></div><p><strong>AI/ML in Precision Medicine</strong> — Stanford Deep Data Research Center, Stanford University</p></div>
+    <div class="cert-item"><div class="cert-dot"></div><p><strong>JavaScript Essentials</strong> — Cisco Networking Academy</p></div>
+    <div class="cert-item"><div class="cert-dot"></div><p><strong>Python Essentials 1 & 2</strong> — Cisco Networking Academy</p></div>
+    <div class="cert-item"><div class="cert-dot"></div><p><strong>Product Design (UI/UX)</strong> — Future Academy of Africa</p></div>
+    <div class="cert-item"><div class="cert-dot"></div><p><strong>Virtual Assistant</strong> — ALX Africa</p></div>
+  </div>
+</div></div></section>
 
-<section class="contact reveal" id="contact"><div class="contact-inner"><div class="section-label" style="justify-content:center;color:var(--mint)">Get in touch</div><h2>Let's build<br>something together.</h2><div class="contact-links"><a href="mailto:ibraheemabdulwakeel55@gmail.com" class="contact-link">✉ Email</a><a href="#" class="contact-link" target="_blank" rel="noopener">LinkedIn</a><a href="#" class="contact-link" target="_blank" rel="noopener">GitHub</a></div><div class="contact-email">ibraheemabdulwakeel55@gmail.com</div></div></section>
+<section class="contact reveal" id="contact"><div class="contact-inner"><div class="section-label" style="justify-content:center;color:var(--mint)">Get in touch</div><h2>Let's build<br>something together.</h2><div class="contact-links"><a href="mailto:ibraheemabdulwakeel55@gmail.com" class="contact-link">✉ Email</a><a href="https://linkedin.com/in/abdulwakeel-ibraheem" class="contact-link" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/Morakinyo032" class="contact-link" target="_blank" rel="noopener">GitHub</a></div><div class="contact-email">ibraheemabdulwakeel55@gmail.com</div></div></section>
 </main>
 
 <footer><p>© 2026 Abdulwakeel Ibraheem. All rights reserved.</p></footer>
@@ -456,7 +591,7 @@ setInterval(() => {
 const cursor = document.getElementById('cursor');
 if (cursor) {
   document.addEventListener('mousemove', e => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
-  document.querySelectorAll('a, button, .skill-card, .project-featured').forEach(el => {
+  document.querySelectorAll('a, button, .skill-card, .project-featured, .repo-card').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('big'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
   });
